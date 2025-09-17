@@ -25,3 +25,10 @@ function muestra_potencia(){
     var num = 2*Math.pow(10,-9);
     console.log("El valor es " + num);
 }
+
+// Ejercicio 5
+function muestra_n_distintas_bases(num){
+    // Transforma num a binario
+    var numDecimal = num.toString(2);
+    console.log("El número " + num + " en binario es: " + numDecimal);
+} 
