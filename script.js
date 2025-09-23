@@ -104,3 +104,76 @@ let initTime = new Date();
     console.log("El algoritmo ha tardado " + (endTime - initTime));
 }
 
+
+//Ejercicio 13 Muestra el siguiente error por pantalla "Error!".
+// No se ha encontrado ningun valor
+function mostrar_error(){
+    console.error("Error!. No se ha encontrado ningun valor");
+}
+
+
+//14. Realiza un ejercicio que al pulsar un botón llamado Eliminar pinte un mensaje de
+//confirmación para asegurarse que el usuario está seguro de su acción
+function eliminar(){
+    let confirmacion = confirm("¿Estás seguro de que quieres eliminar?");
+}
+
+
+//15. Realiza un programa en JavaScript que realice lo siguiente.
+//a. Pida el nombre de usuario y este debe introducir su nombre
+//b. Le pregunte al usuario si quiere abandonar el programa y este deberá
+//Aceptar o Cancelar
+//c. Lance una alerta con la decisión del usuario
+//d. Muestre por consola “FIN DEL PROGRAMA”, en negrita subrayado y de
+//color azul.
+
+function ejercicio15(){
+    let seguir = true;
+
+    while(seguir){
+    let nombre = prompt("Introduce tu nombre:");
+    console.log("Hola, " + nombre + "!");
+    seguir = confirm("¿Quieres continuar en el programa?");
+    console.log("Has decidido continuar?" + seguir);
+
+    }
+    console.log("FIN DEL PROGRAMA");
+}
+
+//16. Realiza un programa que pida por pantalla tu edad, tu nombre, tu ciudad, tu
+//dirección y tu teléfono y que al finalizar muestre un alerta dándote la enhorabuena si
+//la edad de tu cumpleaños elevado a 5 es igual a tu número de teléfono o si
+//simplemente tu ciudad es “Mairena del Alcor”
+
+function pedir_por_pantalla(){
+
+    let edad = document.getElementById("edad").value;
+    let nombre = document.getElementById("nombre").value;
+    let ciudad = document.getElementById("ciudad").value;
+    let direccion = document.getElementById("direccion").value;
+    let telefono = document.getElementById("telefono").value;
+
+    console.log("La informacion recogida es:" + edad + nombre + ciudad + direccion + telefono);
+
+
+    if(edad**5 === telefono || ciudad.toLowerCase() == "mairena del alcor"){
+        console.log("Enhorabuena ");
+    }
+
+}
+
+//17. Haz un programa que dado un número de entrada cuente sus cifras y las muestre
+// por consola.
+
+function contar_cifras(){
+
+    let numero = Math.abs(prompt("Introduced un numero:"));
+    for(i = 0; numero >= 1; i++){
+        
+        cifras ++;
+        numero = Math.floor(numero / 10);
+    }
+
+    console.log("El número " + numero + " tiene " + cifras + " cifras.");
+
+}
